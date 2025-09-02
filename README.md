@@ -38,6 +38,43 @@
 
 ---
 
+Example:
+#from hazard_analyser import HazardAnalyser
+
+# Initialize the analyser
+#analyser = HazardAnalyser(api_key="YOUR_OLLAMA_API_KEY")
+
+# Input a descriptive incident report
+#report = """
+#During routine maintenance, a worker slipped due to oil spillage on the floor, causing a minor injury.
+"""
+
+# Extract hazard analysis
+#analysis = analyser.analyze(report)
+
+#print(analysis)
+
+Sample Output: 
+#{
+  "hazardous_element": "Oil spillage",
+  "initiating_element": "Worker slipped",
+  "pivotal_element": "Slippery floor",
+  "causes": "Poor housekeeping, lack of signage",
+  "consequences": "Minor injury to worker",
+  "severity_score": 3,
+  "likelihood_of_occurrence": 4,
+  "residual_risk": 12,
+  "recommendations": [
+    "Clean oil spillage immediately",
+    "Place warning signs",
+    "Conduct regular floor inspections"
+  ]
+}#
+
+
+
+
+
 ## Installation
 
 1. Clone the repository:
