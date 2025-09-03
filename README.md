@@ -1,6 +1,6 @@
 # Hazard Analyser
 
-**Hazard Analyser** is an AI-powered tool designed to automatically analyze incident reports and generate comprehensive hazard assessments. Leveraging the **Ollama API** with the **LLaMA 3 model** and advanced **prompt engineering**, this tool identifies key elements of industrial hazards and calculates risk metrics to aid decision-making and documentation.
+**Hazard Analyser** is an AI-powered web tool for automatic hazard analysis of industrial incident reports, powered by a custom implementation of the LLaMA 3 model served locally via Ollama and sophisticated prompt engineering. It delivers detailed, structured risk assessments and documentation-ready reports directly through a chat interface. Additionally, for each of the query the results from the chatbot is stored automatically in a tabular format as .csv in the excel file for futher use cases.
 
 ---
 
@@ -12,6 +12,20 @@
 - **Recommendations:** Provides actionable recommendations to mitigate identified risks.
 - **Prioritization:** Helps prioritize risks based on severity and likelihood for effective risk management.
 - **Documentation:** Generates structured reports that can be directly used for industry documentation.
+
+---
+
+## Architecture & Technologies Used
+
+Backend: Python 3, FastAPI (for web API and HTML/Jinja2 templating)
+
+AI Model Serving: Ollama with LLaMA 3 (local large language model inference)
+
+Prompt Engineering: Custom system prompts optimized for process safety risk analysis
+
+Frontend: HTML/CSS, Jinja2 (dynamic server-side rendering)
+
+Storage/Export: Results are persisted/exported to CSV for compliance and record-keeping
 
 ---
 
@@ -72,12 +86,19 @@ Sample Output:
 }#
 
 
-
-
-
 ## Installation
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/hazard_analyser.git
    cd hazard_analyser
+
+## Project structure:
+
+hazard_analyzer.py        # Handles AI analysis and CSV export
+mainchat.py               # FastAPI app with chat endpoints
+templates/chat.html       # Chat UI (Jinja2 rendered)
+static/style.css          # Web styling
+requirements.txt          # Dependencies
+hazard_results.csv        # Output (auto-generated)
+
