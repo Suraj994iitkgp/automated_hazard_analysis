@@ -1,4 +1,4 @@
-# Hazard Analyser
+# Automated Hazard Analyser Chatbot
 
 **Hazard Analyser** is an AI-powered web tool for automatic hazard analysis of industrial incident reports, powered by a custom implementation of the LLaMA 3 model served locally via Ollama and sophisticated prompt engineering. It delivers detailed, structured risk assessments and documentation-ready reports directly through a chat interface. Additionally, for each of the query the results from the chatbot is stored automatically in a tabular format as .csv in the excel file for futher use cases.
 
