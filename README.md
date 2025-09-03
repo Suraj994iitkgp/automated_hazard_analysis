@@ -102,3 +102,4 @@ static/style.css          # Web styling
 requirements.txt          # Dependencies
 hazard_results.csv        # Output (auto-generated)
 
+![Chat Interface Screenshot](images/chatbot.png)
